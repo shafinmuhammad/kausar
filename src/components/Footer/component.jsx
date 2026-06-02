@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Heart } from 'lucide-react';
-import logo from '../../assets/logo-wbg.png';
+import logo from '../../assets/logo-round-2.png';
 import swiggyIcon from '../../assets/swiggy.svg';
 import './style.scss';
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/logo-wbg.png';
+import logo from '../../assets/logo-round-2.png';
 import { useIsMobile } from '../../hooks/useIsMobile';
 import './style.scss';
 
