@@ -1,0 +1,33 @@
+
+.guestbook-page-container {
+  background-color: #ffffff;
+}
+
+/* Styles for Guestbook */
+
+
+/* Extracted Styles */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.review-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.stars {
+  color: var(--primary);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.quote {
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.6;
+}

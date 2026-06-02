@@ -1,0 +1,95 @@
+
+.reservation-page-container {
+  background-color: #ffffff;
+}
+
+/* Styles for Reservation */
+
+
+/* Extracted Styles */
+.subtitle {
+  color: #aaa;
+  margin-top: 15px;
+}
+
+.reservation-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: transparent !important;
+  border: 1px solid rgba(197, 157, 95, 0.3);
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group.full-width {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  color: var(--primary);
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 12px 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--primary);
+}
+
+.confirm-btn {
+  background-color: var(--primary);
+  color: #1d1914;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.confirm-btn:hover {
+  background-color: #a88147;
+}
+
+.form-footer-text {
+  color: #888;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+}

@@ -1,0 +1,26 @@
+
+.gallery-page-container {
+  background-color: #ffffff;
+}
+
+/* Styles for Gallery */
+
+
+/* Extracted Styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
