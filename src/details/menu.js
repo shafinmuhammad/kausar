@@ -35,12 +35,6 @@ export const arabicMenu = [
     price: "₹350+",
     popular: true
   },
-  {
-    name: "Fresh Juice",
-    description: "Refreshing cold-pressed fresh juices.",
-    price: "₹50",
-    popular: false
-  }
 ];
 
 export const chineseMenu = [
@@ -90,6 +84,12 @@ export const chineseMenu = [
     name: "Garlic Naan",
     description: "Soft, oven-baked flatbread topped with roasted garlic and butter.",
     price: "₹35",
+    popular: false
+  },
+  {
+    name: "Fresh Juice",
+    description: "Refreshing cold-pressed fresh juices.",
+    price: "₹50",
     popular: false
   }
 ];

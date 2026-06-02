@@ -1,1 +1,16 @@
 /* Styles for Hero */
+
+@keyframes slideInFromRightText {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-text {
+  animation: slideInFromRightText 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}

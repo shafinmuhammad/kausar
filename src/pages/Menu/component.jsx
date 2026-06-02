@@ -4,6 +4,7 @@ import { Star } from 'lucide-react';
 import { arabicMenu, chineseMenu } from '../../details/menu';
 import { branches } from '../../details/branches';
 import heroImg from '../../assets/beefcircle.png';
+import swiggyIcon from '../../assets/swiggy.svg';
 import PageHero from '../../components/PageHero/component';
 import './style.scss';
 
@@ -80,8 +81,18 @@ const MenuPage = () => {
         </div>
 
         <div className="menu-cta">
-          <p>Can't decide? Let us help you!</p>
-          <button className="whatsapp-btn">Chat on WhatsApp</button>
+          <p>Can't decide? Let us help you or order directly!</p>
+          <div style={{display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap'}}>
+            <a href="https://wa.me/919072647474" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
+              <button className="whatsapp-btn">Chat on WhatsApp</button>
+            </a>
+            <a href="https://www.swiggy.com/search?query=Kausar+Restaurant" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
+              <button className="whatsapp-btn" style={{backgroundColor: '#fc8019', color: 'white', display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 24px'}}>
+                <img src={swiggyIcon} alt="Swiggy" width="24" height="24" style={{ filter: 'brightness(0) invert(1)' }} />
+                Swiggy
+              </button>
+            </a>
+          </div>
         </div>
       </section>
     </div>

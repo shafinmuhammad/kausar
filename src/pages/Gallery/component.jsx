@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import img1 from '../../assets/chicken_mandi.png';
 import img2 from '../../assets/beef_mandi.png';
 import img3 from '../../assets/mutton_mandi.png';
@@ -14,6 +15,7 @@ import './style.scss';
 
 const GalleryPage = () => {
   const location = useLocation();
+  const isMobile = useIsMobile();
   const isDedicatedPage = location.pathname === '/gallery';
 
   const galleryImages = [
@@ -27,6 +29,8 @@ const GalleryPage = () => {
     { src: img8, alt: 'Chicken Noodles' }
   ];
 
+  const displayedImages = isMobile ? galleryImages.slice(0, 4) : galleryImages;
+
   return (
     <div className="gallery-page-container">
       {isDedicatedPage && <PageHero title="Gallery" subtitle="Visual Feast" image={heroImg} />}
@@ -38,7 +42,7 @@ const GalleryPage = () => {
         </div>
         
         <div className="gallery-grid">
-          {galleryImages.map((img, index) => (
+          {displayedImages.map((img, index) => (
             <img 
               key={index}
               src={img.src} 
