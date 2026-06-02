@@ -55,7 +55,6 @@ const HeaderBar = () => {
             <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
             <li><Link to="/menu" className={location.pathname === '/menu' ? 'active' : ''}>Menu</Link></li>
             <li><Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''}>Gallery</Link></li>
-            <li><Link to="/guestbook" className={location.pathname === '/guestbook' ? 'active' : ''}>Guestbook</Link></li>
             <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
           </ul>
           <Link to="/reservation" className="btn-primary" style={{textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>Enquire</Link>

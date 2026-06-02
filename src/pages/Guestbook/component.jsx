@@ -1,16 +1,23 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Star } from 'lucide-react';
+import heroImg from '../../assets/banner-2.png';
+import PageHero from '../../components/PageHero/component';
 import './style.scss';
 
 const GuestbookPage = () => {
+  const location = useLocation();
+  const isDedicatedPage = location.pathname === '/guestbook';
+
   return (
     <div className="guestbook-page-container">
-    <section className="guestbook-section page-section bg-white" id="reviews">
-      <div className="section-header" data-aos="fade-up">
-        <span className="badge">People Talk</span>
-        <h2>Our <span>Guestbook</span></h2>
-        <div className="divider"></div>
-      </div>
+      {isDedicatedPage && <PageHero title="Guestbook" subtitle="People Talk" image={heroImg} />}
+      <section className="guestbook-section page-section bg-white" id="reviews" style={isDedicatedPage ? {paddingTop: '60px'} : {}}>
+        <div className="section-header" data-aos="fade-up">
+          <span className="badge">People Talk</span>
+          <h2>Our <span>Guestbook</span></h2>
+          <div className="divider"></div>
+        </div>
 
       <div className="reviews-grid">
         <div className="review-card" data-aos="fade-up" data-aos-delay="100">

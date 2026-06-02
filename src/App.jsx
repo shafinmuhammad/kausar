@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HeaderBar from './components/HeaderBar';
+import ScrollToTop from './components/ScrollToTop/component';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="main-wrapper">
+      <ScrollToTop />
       <HeaderBar />
       
       <Suspense fallback={<div className="loading-fallback" style={{paddingTop: '100px', textAlign: 'center'}}>Loading content...</div>}>
