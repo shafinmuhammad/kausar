@@ -29,11 +29,6 @@
   transition: all 0.3s ease;
 }
 
-.navbar.scrolled {
-  background-color: rgba(29, 25, 20, 0.98);
-  padding: 8px 8%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
 
 .loading-fallback {
   text-align: center;
