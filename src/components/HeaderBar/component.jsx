@@ -23,7 +23,7 @@ const HeaderBar = () => {
       <div className="logo-container">
         <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <img src={logo} alt="Kausar Restaurant Logo" className="logo" />
-          <span className='company-name' style={{ color: 'white', marginLeft: '10px' }}>Kausar Resto</span>
+          <span className='company-name' style={{  marginLeft: '10px' }}>Kausar Mandhi</span>
         </Link>
       </div>
 
