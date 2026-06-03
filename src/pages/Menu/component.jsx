@@ -66,7 +66,7 @@ const MenuPage = () => {
 
         <div className="menu-grid">
           {currentMenu.map((item, index) => (
-            <div className="menu-card" key={index} tabIndex={0} data-aos="fade-up" data-aos-delay={100 * (index % 4 + 1)}>
+            <div className="menu-card" key={index} data-aos="fade-up" data-aos-delay={100 * (index % 4 + 1)}>
               <div className="card-header">
                 <h3>{item.name}</h3>
                 {item.popular && <span className="popular-tag"><Star size={12} style={{marginRight: '4px'}} /> Popular</span>}

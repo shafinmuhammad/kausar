@@ -53,9 +53,7 @@
   transform-origin: bottom center;
 }
 
-.menu-card:hover,
-.menu-card:focus,
-.menu-card:focus-within {
+.menu-card:hover {
   border-color: var(--primary);
   transform: translateY(-12px) scale(1.05);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(197, 157, 95, 0.15);

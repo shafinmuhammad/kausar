@@ -53,11 +53,16 @@ const Hero = () => {
           </div>
           
           {isMobile ? (
-            <div className="hero-btn-container" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-              <Link to="/reservation" style={{textDecoration: 'none', width: '100%'}}>
-                <button className="btn-primary" style={{width: '100%'}}>ENQUIRE</button>
-              </Link>
-            </div>
+            <>
+              <div className="mobile-hero-image-wrapper">
+                <img src={img1} alt="Chicken Alfaham Mandi" className="mobile-hero-image" />
+              </div>
+              <div className="hero-btn-container" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                <Link to="/reservation" style={{textDecoration: 'none', width: '100%'}}>
+                  <button className="btn-primary" style={{width: '100%'}}>ENQUIRE</button>
+                </Link>
+              </div>
+            </>
           ) : (
             <div className="hero-btn-container" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
               <Link to="/menu" style={{textDecoration: 'none'}}>
