@@ -48,6 +48,7 @@ const GalleryPage = () => {
               src={img.src} 
               alt={img.alt} 
               className="gallery-img" 
+              tabIndex={0}
               data-aos="zoom-in" 
               data-aos-delay={(index % 4 + 1) * 100} 
             />

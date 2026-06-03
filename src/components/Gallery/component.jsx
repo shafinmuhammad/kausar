@@ -14,12 +14,12 @@ const Gallery = () => {
       </div>
       
       <div className="gallery-grid">
-        <img src={mandiDish} alt="Gallery item" className="gallery-img" data-aos="zoom-in" data-aos-delay="100" />
-        <img src={round} alt="Gallery item" className="gallery-img" onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="200" />
-        <img src={hero} alt="Gallery item" className="gallery-img" onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="300" />
-        <img src={mandiDish} alt="Gallery item" className="gallery-img" data-aos="zoom-in" data-aos-delay="400" />
-        <img src={round} alt="Gallery item" className="gallery-img" onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="500" />
-        <img src={hero} alt="Gallery item" className="gallery-img" onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="600" />
+        <img src={mandiDish} alt="Gallery item" className="gallery-img" tabIndex={0} data-aos="zoom-in" data-aos-delay="100" />
+        <img src={round} alt="Gallery item" className="gallery-img" tabIndex={0} onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="200" />
+        <img src={hero} alt="Gallery item" className="gallery-img" tabIndex={0} onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="300" />
+        <img src={mandiDish} alt="Gallery item" className="gallery-img" tabIndex={0} data-aos="zoom-in" data-aos-delay="400" />
+        <img src={round} alt="Gallery item" className="gallery-img" tabIndex={0} onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="500" />
+        <img src={hero} alt="Gallery item" className="gallery-img" tabIndex={0} onError={(e) => e.target.src = mandiDish} data-aos="zoom-in" data-aos-delay="600" />
       </div>
     </section>
   );
