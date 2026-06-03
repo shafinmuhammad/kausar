@@ -597,6 +597,7 @@ h4,
 
   .hero-content p {
     text-align: center;
+    margin: 0 auto;
   }
 
   .hero-btn-container {

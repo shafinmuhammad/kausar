@@ -109,7 +109,7 @@
 
 .nav-links-mobile li a.active,
 .nav-links-mobile li a:hover {
-  color: #e51d20; /* Red color matching the screenshot */
+  color: var(--primary); /* Red color matching the screenshot */
 }
 
 .mobile-call-btn {
