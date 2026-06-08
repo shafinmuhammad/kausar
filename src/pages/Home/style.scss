@@ -1,5 +1,90 @@
 .home-page {
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, var(--primary-light) 15%, #ffffff);
   padding-top: 0;
   min-height: calc(100vh - 300px);
+
+  .bg-white {
+    background-color: transparent !important;
+  }
+
+  /* Replace primary with white in the primary-light area (About section) */
+  .about-page-container {
+    .badge, .explore-link, .section-header h2 span {
+      color: #ffffff !important;
+    }
+    .badge {
+      border-color: #ffffff !important;
+    }
+    .divider {
+      background-color: #ffffff !important;
+    }
+    .feature-card {
+      border-color: rgba(255, 255, 255, 0.4) !important;
+      &:hover {
+        border-color: #ffffff !important;
+      }
+    }
+  }
+
+  /* Replace primary with white in Menu section as well */
+  .menu-page-container {
+    .badge, .section-header h2 span, .menu-cta p {
+      color: #ffffff !important;
+    }
+    .badge {
+      border-color: #ffffff !important;
+    }
+    .divider {
+      background-color: #ffffff !important;
+    }
+
+    /* Branch selector buttons */
+    .branch-btn {
+      border-color: #ffffff !important;
+      color: #ffffff !important;
+      
+      &.active {
+        background-color: #ffffff !important;
+        color: #1d1914 !important;
+      }
+    }
+
+    /* Menu Tabs */
+    .tab.active, .tab:hover {
+      background-color: #ffffff !important;
+      border-color: #ffffff !important;
+      color: #1d1914 !important;
+    }
+
+    /* Menu Cards */
+    .menu-card {
+      border-color: rgba(255, 255, 255, 0.4) !important;
+      &:hover {
+        border-color: #ffffff !important;
+      }
+      p {
+        color: #ffffff !important;
+      }
+    }
+    .card-header h3 {
+      color: #ffffff !important;
+    }
+    .popular-tag {
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+    }
+    .price {
+      color: #ffffff !important;
+    }
+    .order-btn {
+      background-color: #ffffff !important;
+      color: #1d1914 !important;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-btn {
+      background-color: #ffffff !important;
+      color: #1d1914 !important;
+    }
+  }
 }

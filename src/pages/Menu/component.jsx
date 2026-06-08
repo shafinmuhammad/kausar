@@ -26,10 +26,11 @@ const MenuPage = () => {
           <div className="divider"></div>
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginBottom: '30px' }} data-aos="fade-up">
+        <div className="menu-branch-selector" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginBottom: '30px' }} data-aos="fade-up">
           {branches.map(branch => (
             <button
               key={branch.id}
+              className={`branch-btn ${activeBranchId === branch.id ? 'active' : ''}`}
               onClick={() => setActiveBranchId(branch.id)}
               style={{
                 padding: '8px 16px',
