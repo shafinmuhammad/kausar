@@ -79,7 +79,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="contact-buttons">
-              <button className="whatsapp-btn full-width" onClick={() => window.open(`https://wa.me/${activeBranch.phone.replace(/[^0-9]/g, '')}`, '_blank')}>Chat on WhatsApp</button>
+              <button className="whatsapp-btn" onClick={() => window.open(`https://wa.me/${activeBranch.phone.replace(/[^0-9]/g, '')}`, '_blank')}>Chat on WhatsApp</button>
               <button className="call-btn full-width" onClick={() => window.location.href = `tel:${activeBranch.phone}`}>Call Now</button>
             </div>
           </div>

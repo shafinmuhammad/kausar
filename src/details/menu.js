@@ -1,37 +1,37 @@
 export const arabicMenu = [
   {
     name: "Chicken Mandhi",
-    description: "Authentic Arabic Mandhi Rice with tender, aromatic chicken.",
+    description: "Aromatic rice with tender, slow-cooked chicken",
     price: "₹160+",
     popular: true
   },
   {
     name: "Normal Alfaham",
-    description: "Classic grilled chicken marinated in middle-eastern spices.",
+    description: "Classic grilled chicken in Middle-Eastern spices",
     price: "₹180+",
     popular: true
   },
   {
     name: "Peri Peri Alfaham",
-    description: "Spicy and tangy grilled chicken, served with a fiery twist.",
+    description: "Spicy, tangy grilled chicken with a fiery twist",
     price: "₹190+",
     popular: false
   },
   {
     name: "Beef Mandhi",
-    description: "Tender, slow-cooked beef with aromatic Mandhi rice.",
+    description: "Slow-cooked beef on fragrant Mandi rice",
     price: "₹200+",
     popular: true
   },
   {
     name: "Beef Ribs",
-    description: "Succulent beef ribs cooked to perfection.",
+    description: "Succulent slow-braised beef ribs, fall-off-the-bone",
     price: "₹230+",
     popular: false
   },
   {
     name: "Mutton Zurbiyan",
-    description: "Flavorful slow-cooked mutton with perfectly seasoned Zurbiyan rice.",
+    description: "Royal Zurbiyan rice with saffron-glazed slow-cooked mutton",
     price: "₹350+",
     popular: true
   },

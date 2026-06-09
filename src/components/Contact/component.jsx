@@ -42,7 +42,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="contact-buttons">
-            <button className="whatsapp-btn full-width">Chat on WhatsApp</button>
+            <button className="whatsapp-btn">Chat on WhatsApp</button>
             <button className="call-btn full-width">Call Now</button>
           </div>
         </div>

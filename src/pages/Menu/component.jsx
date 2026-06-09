@@ -19,28 +19,19 @@ const MenuPage = () => {
   return (
     <div className="menu-page-container">
       {isDedicatedPage && <PageHero title="Our Menu" subtitle="Taste the Best" image={heroImg} />}
-      <section className="menu-section page-section bg-white" id="menu" style={isDedicatedPage ? {paddingTop: '60px'} : {}}>
+      <section className="menu-section page-section bg-menu" id="menu" style={isDedicatedPage ? {paddingTop: '60px'} : {}}>
         <div className="section-header" data-aos="fade-up">
           <span className="badge">Taste the Best</span>
           <h2>Discover Our <span>Menu</span></h2>
           <div className="divider"></div>
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginBottom: '30px' }} data-aos="fade-up">
+        <div className="branch-selector-container" data-aos="fade-up">
           {branches.map(branch => (
             <button
               key={branch.id}
               onClick={() => setActiveBranchId(branch.id)}
-              style={{
-                padding: '8px 16px',
-                borderRadius: '20px',
-                border: '1px solid var(--primary)',
-                backgroundColor: activeBranchId === branch.id ? 'var(--primary)' : 'transparent',
-                color: activeBranchId === branch.id ? '#1d1914' : 'var(--primary)',
-                fontWeight: '600',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
+              className={`branch-select-btn ${activeBranchId === branch.id ? 'active' : ''}`}
             >
               {branch.name}
             </button>
@@ -51,37 +42,74 @@ const MenuPage = () => {
           <button 
             className={`tab ${activeTab === 'arabic' ? 'active' : ''}`}
             onClick={() => setActiveTab('arabic')}
-            style={activeTab !== 'arabic' ? {color: 'var(--text)', borderColor: 'rgba(0,0,0,0.2)'} : {}}
           >
             Arabic Menu
           </button>
           <button 
             className={`tab ${activeTab === 'chinese' ? 'active' : ''}`}
             onClick={() => setActiveTab('chinese')}
-            style={activeTab !== 'chinese' ? {color: 'var(--secondary)', borderColor: 'rgba(0,0,0,0.2)'} : {}}
           >
             Chinese Menu
           </button>
         </div>
 
-        <div className="menu-grid">
-          {currentMenu.map((item, index) => (
-            <div className="menu-card" key={index} data-aos="fade-up" data-aos-delay={100 * (index % 4 + 1)}>
-              <div className="card-header">
-                <h3>{item.name}</h3>
-                {item.popular && <span className="popular-tag"><Star size={12} style={{marginRight: '4px'}} /> Popular</span>}
-              </div>
-              <p>{item.description}</p>
-              <div className="card-footer">
-                <span className="price">{item.price}</span>
-                <button className="order-btn">Order Now</button>
-              </div>
+        {/* Elegant Table d'hôte Menu Container */}
+        <div className="menu-paper-card" data-aos="fade-up" data-aos-delay="200">
+          <div className="menu-paper-inner">
+            {/* Corner decorations */}
+            <div className="corner-decor top-left"></div>
+            <div className="corner-decor top-right"></div>
+            <div className="corner-decor bottom-left"></div>
+            <div className="corner-decor bottom-right"></div>
+
+            {/* Menu Header Ornament */}
+            <div className="menu-paper-header">
+              <svg className="flourish flourish-left" width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12C8 12 12 4 18 4C24 4 28 10 32 10C34 10 34 8 33 7C32 6 30 7 30 9C30 11 32 12 34 11" stroke="#c59d5f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="18" cy="4" r="2.5" fill="#c59d5f"/>
+              </svg>
+              
+              <h3 className="menu-paper-title">Kausar Mandhi</h3>
+              
+              <svg className="flourish flourish-right" width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12C8 12 12 4 18 4C24 4 28 10 32 10C34 10 34 8 33 7C32 6 30 7 30 9C30 11 32 12 34 11" stroke="#c59d5f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="18" cy="4" r="2.5" fill="#c59d5f"/>
+              </svg>
             </div>
-          ))}
+
+            <div className="menu-paper-divider">
+              <div className="line"></div>
+              <div className="diamond"></div>
+              <div className="line"></div>
+            </div>
+
+            {/* Menu Items */}
+            <div className="menu-paper-list">
+              {currentMenu.map((item, index) => (
+                <div className="menu-paper-item" key={index}>
+                  <div className="item-name-group">
+                    <span className="item-name">{item.name}</span>
+                    {item.popular && (
+                      <span className="item-badge">
+                        <Star size={8} fill="currentColor" style={{ marginRight: '3px' }} />
+                        POPULAR
+                      </span>
+                    )}
+                  </div>
+                  <div className="item-dots"></div>
+                  <span className="item-description">{item.description}</span>
+                  <span className="item-price">{item.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="menu-cta">
-          <p>Can't decide? Let us help you or order directly!</p>
+        <div className="menu-footer-note" data-aos="fade-up">
+          Can't decide? Our staff are happy to guide you.
+        </div>
+
+        <div className="menu-cta" data-aos="fade-up">
           <div style={{display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href="https://wa.me/919072647474" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
               <button className="whatsapp-btn">Chat on WhatsApp</button>

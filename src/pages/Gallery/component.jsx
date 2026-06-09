@@ -34,7 +34,7 @@ const GalleryPage = () => {
   return (
     <div className="gallery-page-container">
       {isDedicatedPage && <PageHero title="Gallery" subtitle="Visual Feast" image={heroImg} />}
-      <section className="gallery-section page-section bg-white" id="gallery" style={isDedicatedPage ? {paddingTop: '60px'} : {}}>
+      <section className="gallery-section page-section bg-gallery" id="gallery" style={isDedicatedPage ? {paddingTop: '60px'} : {}}>
         <div className="section-header" data-aos="fade-up">
           <span className="badge">Visual Feast</span>
           <h2>Our <span>Gallery</span></h2>

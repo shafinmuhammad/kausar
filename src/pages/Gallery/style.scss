@@ -1,9 +1,21 @@
-
 .gallery-page-container {
-  background-color: #ffffff;
+  background-color: var(--primary-light);
 }
 
-/* Styles for Gallery */
+.bg-gallery {
+  background: linear-gradient(to bottom, #ffffff, var(--primary-light)) !important;
+  color: var(--secondary) !important;
+
+  .section-header h2 {
+    color: var(--secondary) !important;
+  }
+
+  .badge {
+    border-color: rgba(197, 157, 95, 0.5) !important;
+    color: var(--primary) !important;
+  }
+}
+
 
 
 /* Extracted Styles */
