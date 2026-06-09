@@ -39,6 +39,17 @@ const Hero = () => {
     }
   };
 
+  const renderTitle = (title) => {
+    const words = title.split(' ');
+    if (words.length <= 1) return title;
+    const lastWord = words.pop();
+    return (
+      <>
+        {words.join(' ')} <span className="highlight-word">{lastWord}</span>
+      </>
+    );
+  };
+
   return (
     <div className="app-container" id="home">
       <div className="bg-decoration circle-1"></div>
@@ -46,8 +57,8 @@ const Hero = () => {
       <main className="hero-section">
         <div className="hero-content" data-aos="fade-right" data-aos-delay="200">
           <div key={hoveredImage || 'default'} className="animate-slide-in-text">
-            <h1>{currentText.title}</h1>
-            <p>
+            <h1>{renderTitle(currentText.title)}</h1>
+            <p className="hero-description">
               {currentText.subtitle}
             </p>
           </div>
@@ -57,24 +68,49 @@ const Hero = () => {
               <div className="mobile-hero-image-wrapper">
                 <img src={img1} alt="Chicken Alfaham Mandi" className="mobile-hero-image" />
               </div>
-              <div className="hero-btn-container" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+              <div className="hero-btn-container mobile-btns">
                 <Link to="/reservation" style={{textDecoration: 'none', width: '100%'}}>
-                  <button className="btn-primary" style={{width: '100%'}}>ENQUIRE</button>
+                  <button className="btn-hero btn-hero-primary full-width">ENQUIRE</button>
                 </Link>
               </div>
             </>
           ) : (
-            <div className="hero-btn-container" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-              <Link to="/menu" style={{textDecoration: 'none'}}>
-                <button className="btn-primary">ORDER ONLINE</button>
-              </Link>
-              <Link to="/contact" style={{textDecoration: 'none'}}>
-                <button className="btn-primary" style={{backgroundColor: 'rgba(255,255,255,0.1)', color: '#fff', borderColor: '#fff'}}>FIND A BRANCH</button>
-              </Link>
-              <Link to="/reservation" style={{textDecoration: 'none'}}>
-                <button className="btn-primary" style={{backgroundColor: 'rgba(255,255,255,0.1)', color: '#fff', borderColor: '#fff'}}>BOOK A TABLE</button>
-              </Link>
-            </div>
+            <>
+              <div className="hero-btn-container">
+                <Link to="/menu" style={{textDecoration: 'none'}}>
+                  <button className="btn-hero btn-hero-primary">ORDER ONLINE</button>
+                </Link>
+                <Link to="/reservation" style={{textDecoration: 'none'}}>
+                  <button className="btn-hero btn-hero-secondary">BOOK A TABLE</button>
+                </Link>
+              </div>
+              
+              <div className="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                <div className="stat-item">
+                  <span className="stat-number">5</span>
+                  <div className="stat-text-group">
+                    <span className="stat-label">Branches</span>
+                    <Link to="/contact" className="stat-link">Find a branch →</Link>
+                  </div>
+                </div>
+                <div className="stat-divider"></div>
+                <div className="stat-item">
+                  <span className="stat-number">15+</span>
+                  <div className="stat-text-group">
+                    <span className="stat-label">Years of</span>
+                    <span className="stat-sublabel">Heritage</span>
+                  </div>
+                </div>
+                <div className="stat-divider"></div>
+                <div className="stat-item">
+                  <span className="stat-number">3</span>
+                  <div className="stat-text-group">
+                    <span className="stat-label">Mandi</span>
+                    <span className="stat-sublabel">Styles</span>
+                  </div>
+                </div>
+              </div>
+            </>
           )}
         </div>
         
